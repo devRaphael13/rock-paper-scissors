@@ -129,6 +129,13 @@ main .score_board {
     margin-top: 6em;
 }
 
+main .score_board p {
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
 
 main .score_board .scores {
     display: flex;

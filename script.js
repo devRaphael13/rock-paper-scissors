@@ -40,7 +40,7 @@ function game(choice) {
 
 
 function createHistory(result) {
-    if (history > 5) {
+    if (history >= 5) {
         historyContainerElem.removeChild(historyContainerElem.firstElementChild)
     }
 
