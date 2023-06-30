@@ -29,13 +29,13 @@
         </svg>
       </div>
 
-      <div class="weapons">
+      <div id="weapons" class="weapons">
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button>
       </div>
 
-      <div class="choices">
+      <div id="choices" class="choices">
         <h2>Fight!</h2>
         <div>
           <div class="choice">
@@ -47,7 +47,6 @@
             <h3>Opponent</h3>
             <div id="oppChoice"></div>
           </div>
-
         </div>
         <p id="result"></p>
       </div>
@@ -55,21 +54,12 @@
       <div class="score_board">
         <h2>Score Board</h2>
         <div class="scores">
-            <p>You</p>
-            <p id="scores">0 : 0</p>
-            <p>Opponent</p>
-
+          <p>You</p>
+          <p id="scores">0 : 0</p>
+          <p>Opponent</p>
         </div>
-        <div class="history_container">
-                    <div id="history" class="history">
-            <div id="yourScore">
-            </div>
-
-            <div id="oppScore">
-            </div>
+        <div id="historyContainer" class="history_container">
         </div>
-        </div>
-
       </div>
     </main>
     <script src="script.js"></script>

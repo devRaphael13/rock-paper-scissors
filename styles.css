@@ -70,6 +70,11 @@ main .weapons button {
     font-weight: 800;
     text-transform: uppercase;
     cursor: pointer;
+    border: 0.2em solid #0E4840;
+}
+
+main .weapons button:hover {
+    border-color: #187B6E;
 }
 
 main .choices {
@@ -142,16 +147,19 @@ main .score_board .history_container {
 
 main .score_board .history {
     background-color: #102F50;
-    padding: 1em;
+    padding: 0.6em;
     border-radius: 5px;
     display: flex;
     flex: 1;
     column-gap: 0.5em;
+    margin-top: 0.2em;
 }
-/* win 0E480F loss 48190E */
+
 main .score_board .history div {
-    background-color: #48190E;
     border-radius: 5px;
-    padding: 1em;
+    padding: 0.5em;
     width: 100%;
+    font-size: large;
+    font-weight: 800;
+    text-align: center;
 }
