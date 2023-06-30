@@ -34,13 +34,14 @@ function game(choice) {
   scoresElem.textContent = `${yourScore} : ${oppScore}`;
 
   createHistory(result)
+  history++
 
 }
 
 
 function createHistory(result) {
     if (history > 5) {
-        historyContainerElem.removeChild(historyContainerElem.firstElementChild())
+        historyContainerElem.removeChild(historyContainerElem.firstElementChild)
     }
 
     if (result === "Tie") {
