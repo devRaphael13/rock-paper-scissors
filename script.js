@@ -6,6 +6,7 @@ const oppChoiceElem = document.getElementById("oppChoice");
 const resultElem = document.getElementById("result");
 const scoresElem = document.getElementById("scores");
 const historyContainerElem = document.getElementById("historyContainer");
+const lastFiveTextElem = document.getElementById("lastFiveText");
 
 let round = 0;
 let yourScore = 0;
@@ -18,6 +19,7 @@ Array.from(weapons).forEach((child) => {
     roundElem.textContent = `round ${++round}`;
     choicesElem.style.display = "block";
     historyContainerElem.style.display = "block";
+    lastFiveTextElem.style.display = "block"
   });
 });
 
