@@ -80,6 +80,17 @@ main .weapons button:hover {
 main .choices {
     display: none;
     margin-top: 6em;
+    animation: 1s 1 forwards slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 12em;
+    }
+
+    to {
+        margin-top: 6em;
+    }
 }
 
 main .choices h2 {
@@ -161,6 +172,17 @@ main .score_board .history {
     flex: 1;
     column-gap: 0.5em;
     margin-top: 0.2em;
+    animation: 1s 1 forwards driftin;
+}
+
+@keyframes driftin {
+    from {
+        margin-top: 10em;
+    }
+
+    to {
+        margin_top: 0.2em;
+    }
 }
 
 main .score_board .history div {
