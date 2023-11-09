@@ -11,6 +11,7 @@
     <main>
       <h1>Rock-Paper-Scissors</h1>
       <h2 id="round">Round 1</h2>
+
       <div class="subtitle">
         <p>Choose your weapon</p>
         <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -36,7 +37,7 @@
       </div>
 
       <div id="choices" class="choices">
-        <h2>Fight!</h2>
+        <!-- <h2>Fight!</h2> -->
         <div>
           <div class="choice">
             <h3>You</h3>
@@ -59,10 +60,18 @@
           <p>Opponent</p>
         </div>
         <p id="lastFiveText">Last Five Scores</p>
-        <div id="historyContainer" class="history_container">
-        </div>
+        <div id="historyContainer" class="history_container"></div>
       </div>
     </main>
+
+    <div id="score_modal" class="score_modal">
+      <h1 id="winner"></h1>
+      <p>Play again?</p>
+      <div class="score_modal-btns">
+        <div class="score_modal-btn no">No</div>
+        <div class="score_modal-btn yes">Yes</div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

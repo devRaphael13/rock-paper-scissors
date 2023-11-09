@@ -7,6 +7,10 @@ const resultElem = document.getElementById("result");
 const scoresElem = document.getElementById("scores");
 const historyContainerElem = document.getElementById("historyContainer");
 const lastFiveTextElem = document.getElementById("lastFiveText");
+const modal = document.getElementById("score_modal")
+const no = document.querySelector(".no");
+const yes = document.querySelector(".yes");
+const winner = document.getElementById("winner");
 
 let round = 0;
 let yourScore = 0;
@@ -43,12 +47,15 @@ function game(choice) {
 
 function createHistory(result) {
     if (history >= 5) {
-        historyContainerElem.removeChild(historyContainerElem.firstElementChild)
+      scoreModal()
+    }
+
+    if (historyContainerElem.children.length >= 5) {
+      historyContainerElem.removeChild(historyContainerElem.firstChild);
     }
 
     if (result === "Tie") {
         historyContainerElem.innerHTML += `<div class="history">
-                                                <div style="background-color: #0D2743;">Tie</div>
                                                 <div style="background-color: #0D2743;">Tie</div>
                                             </div>`;
     } else if (result) {
@@ -62,6 +69,22 @@ function createHistory(result) {
                                                 <div style="background-color: #0E480F;">Won</div>
                                             </div>`;
     }
+}
+
+function scoreModal(){
+  modal.style.display = "block";
+  if (yourScore > oppScore) winner.textContent = "You Win!"
+  else if (oppScore > yourScore) winner.textContent = "You Lose!"
+  else winner.textContent = "It's a Tie"
+
+  no.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
+
+  yes.addEventListener("click", (e) => {
+    modal.style.display = "none";
+    history = 0;
+  });
 }
 
 function getResult(result) {
